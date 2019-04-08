@@ -13,10 +13,7 @@ namespace ErrorHandlerSample.CH35
         public void Withdraw_Amount_biggest_than_balance_should_get_errorCode()
         {
             var account = new Account();
-            var actual = account.Withdraw(10);
-            var expected = -1m;
-
-            actual.ShouldBe(expected);
+            Assert.Throws<NotEnoughMoneyException>(() => account.Withdraw(10));
         }
 
 
@@ -31,6 +28,12 @@ namespace ErrorHandlerSample.CH35
         }
 
     }
+
+    public class NotEnoughMoneyException : Exception
+    {
+
+    }
+
     class Account
     {
         private decimal _balance;
