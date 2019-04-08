@@ -51,13 +51,11 @@ namespace ErrorHandlerSample.CH35
         {
             if (amount > this._balance)
             {
-                return -1;
+                throw new NotEnoughMoneyException();
             }
-            else
-            {
-                this._balance = this._balance - amount;
-                return this._balance;
-            }
+
+            this._balance = this._balance - amount;
+            return this._balance;
         }
     }
 }
