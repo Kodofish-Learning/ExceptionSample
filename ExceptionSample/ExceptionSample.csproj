@@ -14,4 +14,9 @@
     <PackageReference Include="Shouldly" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CH28\" />
+    <Folder Include="CH41\" />
+  </ItemGroup>
+
 </Project>
