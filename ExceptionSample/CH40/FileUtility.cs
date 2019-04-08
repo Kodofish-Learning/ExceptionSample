@@ -6,6 +6,7 @@ namespace ExceptionSample.CH40
     {
         public void MoveFiles(string srcFolder, string destFolder)
         {
+            var folderCheckPoint = new FolderCheckPoint();
             try
             {
                 // 複製 srcFolder 所有檔案到 destFolder
